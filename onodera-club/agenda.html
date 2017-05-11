@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Onodera Club : Agenda</title>
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script>
+    $(window).load(function() {
+	  $('.flexslider').flexslider({
+		animation: "slide",
+		directionNav: false
+	  });
+     });
+    </script>
+    <script>
+      $(document).ready(function() {
+		  $(".tabs-menu a").click(function(event) {
+			  event.preventDefault();
+			  $(this).parent().addClass("current");
+			  $(this).parent().siblings().removeClass("current");
+			  var tab = $(this).attr("href");
+			  $(".tab-content").not(tab).css("display", "none");
+			  $(tab).fadeIn();
+		  });
+		  
+		  $('.mob-nav').click(function(){
+		    $('.nav-wrapper').slideToggle();	  
+		  });
+		  
+		  $('.ex-div ul li a').on('click', function(e){
+			e.preventDefault();  
+			$('.ex-div ul li a.current').removeClass('current');
+			$(this).addClass('current');
+          });
+		  
+       });
+    </script>
+    
+    <script src="js/checklist.js" type="text/javascript"></script>
+        <script>
+            jQuery(document).ready(function () {
+                checklist();
+            });
+        </script>
+    
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+    
+
+   <div class="container related-div">
+       <div class="logo"><a href="#"><img src="images/logo.png" alt="" title=""></a></div>
+       <div class="top-sec clearfix">
+          <ul>
+             <li><a href="#"><img src="images/home-icon.png" alt="" title=""></a></li>
+             <li>Email: <a href="mailto:contato@onoderaclub.com.br">contato@onoderaclub.com.br</a></li>
+             <li>Tel: 11 3208 5553</li>
+          </ul>
+       </div>
+   </div>
+   
+   <div class="nav-wrapper">
+     <div class="container">
+        <ul>
+          <li><a href="#">Quem somos</a></li>
+          <li><a href="#">Infra estrutura</a></li>
+          <li><a href="#">Planos</a></li>
+          <li><a href="#">Horários</a></li>
+          <li><a href="#">Notícias</a></li>
+          <li><a href="#">Corporativo</a></li>
+          <li><a href="#">Convênios e parcerias</a></li>
+          <li><a href="#">Professores</a></li>
+          <li><a href="#">Modalidades</a></li>
+        </ul>
+     </div>
+   </div> <!--nav-wrapper end here-->
+   
+   
+   <div class="flexslider odd">
+      <div class="search-bar">
+         <div class="container">
+            <div class="search">
+               <input type="text" placeholder="Pesquisar">
+               <input type="submit" value="">
+            </div>
+            <div class="mob-nav"><i class="fa fa-bars"></i></div>
+         </div>
+      </div>
+      <ul class="slides">
+         <li>
+           <img src="images/inner-banner.jpg" alt="" title="">
+           <div class="slide-txt">
+              <div class="container">
+                 <h5>Agenda</h5>
+                 <h6>sua grade de horarios</h6>
+              </div>
+           </div>
+         </li>
+      </ul>
+   </div>
+   
+   
+   <div class="agenda-bg">
+      <div class="container related-div">
+      
+        <div class="lady-3"><img src="images/lady3.png" alt="" title=""></div>
+      
+        <div class="row">
+        
+        <div class="col-sm-10">
+        
+        <h2>Agenda</h2>
+      
+         <div class="ex-div odd">
+              <h3><span>1</span>SELECIONE O PUBLICO</h3>
+              <ul>
+                <li><a href="#">tODOS</a></li>
+                <li><a href="#">bABY</a></li>
+                <li><a href="#">kIDS</a></li>
+                <li><a href="#">TEEN</a></li>
+                <li><a href="#">ADULTO</a></li>
+                <li><a href="#">MASTER</a></li>
+              </ul>
+              </div>
+         <div class="ex-div">
+              <h3><span>2</span>SELECIONE A ATIVIDADE</h3>
+              </div>
+              
+         <div id="tabs-container">
+                <ul class="tabs-menu clearfix">
+                    <li class="current"><a href="#tab-1">Aquaticas</a><span></span></li>
+                    <li><a href="#tab-2">coletivas</a><span></span></li>
+                    <li><a href="#tab-3">danca</a><span></span></li>
+                    <li><a href="#tab-4">esportivas</a><span></span></li>
+                    <li><a href="#tab-5">lutas</a><span></span></li>
+                    <li><a href="#tab-6">professores</a><span></span></li>
+                </ul>
+                <div class="tab" id="select-area">
+                  <div id="tab-1" class="tab-content clearfix">
+                     <div class="col-sm-3">
+                        <ul class="check-list">
+                          <li><a data-id="1" data-title="title here one" href="javascript:void(0);">Todos</a></li>
+                          <li><a data-id="2" data-title="title here one" href="javascript:void(0);">Acqua Spin</a></li>
+                          <li><a data-id="3" data-title="title here one" href="javascript:void(0);">Acqua Training</a></li>
+                          <li><a data-id="4" data-title="title here one" href="javascript:void(0);">Hidro Power</a></li>
+                        </ul>
+                      </div>
+                     <div class="col-sm-3">
+                        <ul class="check-list">
+                          <li><a data-id="5" data-title="title here one" href="javascript:void(0);">Todos</a></li>
+                          <li><a data-id="6" data-title="title here one" href="javascript:void(0);">Acqua Spin</a></li>
+                          <li><a data-id="7" data-title="title here one" href="javascript:void(0);">Acqua Training</a></li>
+                          <li><a data-id="8" data-title="title here one" href="javascript:void(0);">Hidro Power</a></li>
+                        </ul>
+                      </div> 
+                     <div class="col-sm-3">
+                        <ul class="check-list">
+                          <li><a data-id="9" data-title="title here one" href="javascript:void(0);">Todos</a></li>
+                          <li><a data-id="10" data-title="title here one" href="javascript:void(0);">Acqua Spin</a></li>
+                          <li><a data-id="11" data-title="title here one" href="javascript:void(0);">Acqua Training</a></li>
+                          <li><a data-id="12" data-title="title here one" href="javascript:void(0);">Hidro Power</a></li>
+                        </ul>
+                      </div>
+                     <div class="col-sm-3">
+                        <ul class="check-list">
+                          <li><a data-id="13" data-title="title here one" href="javascript:void(0);">Todos</a></li>
+                          <li><a data-id="14" data-title="title here one" href="javascript:void(0);">Acqua Spin</a></li>
+                          <li><a data-id="15" data-title="title here one" href="javascript:void(0);">Acqua Training</a></li>
+                          <li><a data-id="16" data-title="title here one" href="javascript:void(0);">Hidro Power</a></li>
+                        </ul>
+                      </div>
+                  </div>
+                  <div id="tab-2" class="tab-content clearfix">
+                     <div class="col-sm-3">
+                        <ul class="check-list">
+                          <li><a data-id="17" data-title="title here one" href="javascript:void(0);">Todos</a></li>
+                          <li><a data-id="18" data-title="title here one" href="javascript:void(0);">Acqua Spin</a></li>
+                          <li><a data-id="19" data-title="title here one" href="javascript:void(0);">Acqua Training</a></li>
+                          <li><a data-id="20" data-title="title here one" href="javascript:void(0);">Hidro Power</a></li>
+                        </ul>
+                      </div>
+                     <div class="col-sm-3">
+                        <ul class="check-list">
+                          <li><a data-id="21" data-title="title here one" href="javascript:void(0);">Todos</a></li>
+                          <li><a data-id="22" data-title="title here one" href="javascript:void(0);">Acqua Spin</a></li>
+                          <li><a data-id="23" data-title="title here one" href="javascript:void(0);">Acqua Training</a></li>
+                          <li><a data-id="24" data-title="title here one" href="javascript:void(0);">Hidro Power</a></li>
+                        </ul>
+                      </div>
+                     <div class="col-sm-3">
+                        <ul class="check-list">
+                          <li><a data-id="25" data-title="title here one" href="javascript:void(0);">Todos</a></li>
+                          <li><a data-id="26" data-title="title here one" href="javascript:void(0);">Acqua Spin</a></li>
+                          <li><a data-id="27" data-title="title here one" href="javascript:void(0);">Acqua Training</a></li>
+                          <li><a data-id="28" data-title="title here one" href="javascript:void(0);">Hidro Power</a></li>
+                        </ul>
+                      </div>
+                     <div class="col-sm-3">
+                        <ul class="check-list">
+                          <li><a data-id="29" data-title="title here one" href="javascript:void(0);">Todos</a></li>
+                          <li><a data-id="30" data-title="title here one" href="javascript:void(0);">Acqua Spin</a></li>
+                          <li><a data-id="31" data-title="title here one" href="javascript:void(0);">Acqua Training</a></li>
+                          <li><a data-id="32" data-title="title here one" href="javascript:void(0);">Hidro Power</a></li>
+                        </ul>
+                      </div>
+                  </div>
+                  <div id="tab-3" class="tab-content clearfix">
+                     <div class="col-sm-3">
+                        <ul class="check-list">
+                          <li><a data-id="33" data-title="title here one" href="javascript:void(0);">Todos</a></li>
+                          <li><a data-id="34" data-title="title here one" href="javascript:void(0);">Acqua Spin</a></li>
+                          <li><a data-id="35" data-title="title here one" href="javascript:void(0);">Acqua Training</a></li>
+                          <li><a data-id="36" data-title="title here one" href="javascript:void(0);">Hidro Power</a></li>
+                        </ul>
+                      </div>
+                  </div>
+                  <div id="tab-4" class="tab-content clearfix">
+                     <div class="col-sm-3">
+                        <ul class="check-list">
+                          <li><a data-id="37" data-title="title here one" href="javascript:void(0);">Todos</a></li>
+                          <li><a data-id="38" data-title="title here one" href="javascript:void(0);">Acqua Spin</a></li>
+                          <li><a data-id="39" data-title="title here one" href="javascript:void(0);">Acqua Training</a></li>
+                          <li><a data-id="40" data-title="title here one" href="javascript:void(0);">Hidro Power</a></li>
+                        </ul>
+                      </div>
+                  </div>
+                  <div id="tab-5" class="tab-content clearfix">
+                     <div class="col-sm-3">
+                        <ul class="check-list">
+                          <li><a data-id="41" data-title="title here one" href="javascript:void(0);">Todos</a></li>
+                          <li><a data-id="42" data-title="title here one" href="javascript:void(0);">Acqua Spin</a></li>
+                          <li><a data-id="43" data-title="title here one" href="javascript:void(0);">Acqua Training</a></li>
+                          <li><a data-id="44" data-title="title here one" href="javascript:void(0);">Hidro Power</a></li>
+                        </ul>
+                      </div>
+                  </div>
+                  <div id="tab-6" class="tab-content clearfix">
+                     <div class="col-sm-3">
+                        <ul class="check-list">
+                          <li><a data-id="45" data-title="title here one" href="javascript:void(0);">Todos</a></li>
+                          <li><a data-id="46" data-title="title here one" href="javascript:void(0);">Acqua Spin</a></li>
+                          <li><a data-id="47" data-title="title here one" href="javascript:void(0);">Acqua Training</a></li>
+                          <li><a data-id="48" data-title="title here one" href="javascript:void(0);">Hidro Power</a></li>
+                        </ul>
+                      </div>
+                  </div>
+               </div>
+              
+            </div>
+            
+         <div id="show-area" style="margin-top:5px;">
+            <ul class="show-selected">
+
+            </ul>
+        </div>   
+            
+         </div>   
+            
+        </div>    
+      
+      </div>
+   </div>
+   
+   <div class="agenda-calender">
+     <div class="container">
+       
+       <div class="main-calender clearfix">
+         <ul class="headerx">
+           <li><i class="fa fa-clock-o"></i> <br> <i class="fa fa-angle-double-down"></i></li>
+           <li class="fst"><h6>15 <span>Segunda</span></h6></li>
+           <li class="fst"><h6>15 <span>Segunda</span></h6></li>
+           <li class="fst"><h6>15 <span>Segunda</span></h6></li>
+           <li class="fst"><h6>15 <span>Segunda</span></h6></li>
+           <li class="fst"><h6>15 <span>Segunda</span></h6></li>
+           <li class="fst"><h6>15 <span>Segunda</span></h6></li>
+           <li class="fst"><h6>15 <span>Segunda</span></h6></li>
+         </ul>
+         
+         <ul>
+           <li class="no-bdr-btm">6.00</li>
+           <li>
+             <div class="bdr-1"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-2"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-3"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-4"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-1"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-2"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-3"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+         </ul>
+         
+         
+         
+         <ul>
+           <li class="no-bdr-btm">7.00</li>
+           <li>
+             <div class="bdr-1"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-2"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-3"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-4"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-1"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-2"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-3"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+         </ul>
+         
+         <ul>
+           <li class="no-bdr-btm">&nbsp;</li>
+           <li>
+             <div class="bdr-1"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-2"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-3"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-4"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-1"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-2"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-3"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+         </ul>
+         
+         <ul>
+           <li class="no-bdr-btm">8.00</li>
+           <li>
+             <div class="bdr-1"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-2"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-3"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-4"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-1"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-2"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-3"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+         </ul>
+         
+         <ul>
+           <li>&nbsp;</li>
+           <li>
+             <div class="bdr-1"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-2"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-3"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-4"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-1"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-2"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+           <li>
+             <div class="bdr-3"></div>
+             <div class="detail-hover">
+               <h2>Running Class</h2>
+               <h3>john</h3>
+               <p>Example-1</p>
+               <p>Example-2</p>
+               <p>Example-3</p>
+             </div>
+             <h2>Running Class</h2>
+             <h3>john</h3>
+           </li>
+         </ul>
+         
+         
+         
+       </div>
+       
+     </div>
+   </div> <!--agenda-calender-->
+   
+   
+   <div class="foot-wrap">
+      <div class="container">
+         <div class="row">
+         
+            <div class="col-sm-3 col-xs-6">
+              <h2>quick links</h2>
+              <ul class="foot-nav">
+                <li><a href="#">Quem somos</a></li>
+                <li><a href="#">Infra estrutura</a></li>
+                <li><a href="#">Planos</a></li>
+                <li><a href="#">Horários</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Corporativo</a></li>
+                <li><a href="#">Convênios e parcerias</a></li>
+                <li><a href="#">Professores</a></li>
+                <li><a href="#">Modalidades</a></li>
+              </ul>
+            </div>
+            
+            <div class="col-sm-3 col-xs-6 bdr-left">
+              <h2>Localização</h2>
+              <p>Endereço: Rua Muniz de Souza, 1264 - <br> Aclimação - São Paulo <br> Tel.: 11 3208 5553</p>
+              <ul class="social">
+                <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              </ul>
+            </div>
+            
+            <div class="col-sm-3 col-xs-6 bdr-top">
+               <h2>Institucional</h2>
+               <p>A Onodera Club atua a mais de 30 anos no mercado, oferecendo a maior gama de modalidades e o melhor em atividades físicas orientadas, </p>
+               <p>através de profissionais capacitados em um ambiente familiar e seguro, voltado totalmente para a qualidade de vida e praticidade para o seu dia a dia.</p>
+            </div>
+            
+            <div class="col-sm-3 col-xs-6 bdr-top bdr-left">
+              <h2>Contato</h2>
+              <p><span>Para enviar dúvidas, críticas ou sugestões para a Academia Onodera Club, use o formulário abaixo. Ou ligue para 11 3208 5553.</span></p>
+              <input type="text" placeholder="Nome*">
+              <input type="text" placeholder="E-mail*">
+              <input type="text" placeholder="Telefone*">
+              <textarea placeholder="Comentários*"></textarea>
+              <input type="submit" value="SAIBA MAIS">
+            </div>
+            
+         </div>
+      </div>
+      <div class="copy-wrapper">
+        <div class="container">
+           <p class="copy-txt">Copyright © 2015 Onodera.</p>
+        </div>
+      </div>
+   </div>
+    
+  </body>
+</html>
