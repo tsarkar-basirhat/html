@@ -1,7 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   
  1. edit here
 =======
 
  1. Added by tapas
+>>>>>>> branchtapas
+=======
+
+ 1. Added by tapas
+  
+ 2. edit here
 >>>>>>> branchtapas
