@@ -1,1 +1,1 @@
-describe about git
+describe more detail about git
